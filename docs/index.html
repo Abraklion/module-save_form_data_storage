@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang=ru>
+<head>
+	<meta charset=UTF-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<script defer src="https://kit.fontawesome.com/0ebdd1ffbb.js" crossorigin="anonymous"></script>
+
+	<!-- Подключаем библиотеку -->
+	<script defer src="saveFormDataStorage.min.js"></script>
+
+	<script defer src="script.js"></script>
+
+	<title>SaveFormDateStorage пример</title>
+
+</head>
+
+<body>
+
+	<div class="hint">Заполните форму и нажмите на кнопку "отправить" или перезагрузите страницу. <br> После перезагрузки страницы рядом с кнопкой отправить появится кнопка "достать из хранилища"</div>
+
+	<div class="container">
+		<form id="sfds-form">
+			<div class="row">
+				<h4>Account</h4>
+				<div class="input-group input-group-icon">
+					<input type="text" placeholder="Full Name" class="sfds-name">
+					<div class="input-icon">
+						<i class="fa fa-user"></i>
+					</div>
+				</div>
+				<div class="input-group input-group-icon">
+					<input type="email" placeholder="Email Adress" class="sfds-email">
+					<div class="input-icon">
+						<i class="fa fa-envelope"></i>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-half">
+					<h4>Date of Birth</h4>
+					<div class="input-group">
+						<div class="col-third"><input type="text" placeholder="DD" class="sfds-dd"></div>
+						<div class="col-third"><input type="text" placeholder="MM" class="sfds-mm"></div>
+						<div class="col-third"><input type="text" placeholder="YYYY" class="sfds-yyyy"></div>
+					</div>
+				</div>
+				<div class="col-half">
+					<h4>Gender</h4>
+					<div class="input-group">
+						<input id="gender-male" type="radio" name="gender" value="male" class="sfds-gender">
+						<label for="gender-male">Male</label>
+						<input id="gender-female" type="radio" name="gender" value="female" class="sfds-gender">
+						<label for="gender-female">Female</label></div>
+				</div>
+			</div>
+			<div class="row">
+				<h4>Payment Details</h4>
+				<div class="input-group">
+					<input id="payment-method-card" type="radio" name="payment-method" value="card" checked class="sfds-payment">
+					<label for="payment-method-card">
+						<span><i class="fa fa-cc-visa"></i>Credit Card</span>
+					</label>
+					<input id="payment-method-paypal" type="radio" name="payment-method" value="paypal" class="sfds-payment">
+					<label for="payment-method-paypal">
+						<span><i class="fa fa-cc-paypal"></i>Paypal</span>
+					</label>
+				</div>
+				<div class="input-group input-group-icon">
+					<input type="text" placeholder="Card Number" class="sfds-card-number">
+					<div class="input-icon">
+						<i class="fa fa-credit-card"></i>
+					</div>
+				</div>
+				<div class="col-half">
+					<div class="input-group input-group-icon">
+						<input type="text" placeholder="Card CVC" class="sfds-card-cvc">
+						<div class="input-icon">
+							<i class="fa fa-user"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-half">
+					<div class="input-group">
+						<select class="sfds-month">
+							<option>01 Jan</option>
+							<option>02 Jan</option>
+						</select>
+						<select class="sfds-year">
+							<option>2015</option>
+							<option>2016</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h4>Terms and Conditions</h4>
+				<div class="input-group">
+					<input id="terms" type="checkbox" class="sfds-terms">
+					<label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+				</div>
+			</div>
+
+			<div class="row row--custom_flex">
+					<button class="btn">Отправить</button>
+			</div>
+		</form>
+
+	</div>
+
+</body>
+</html>
