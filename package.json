@@ -1,6 +1,6 @@
 {
   "name": "save-form-data-storage",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Writes the data entered in the HTML form to LocalStorage and retrieves it as needed.",
   "main": "build/saveFormDataStorage.js",
   "scripts": {
