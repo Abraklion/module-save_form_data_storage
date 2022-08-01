@@ -3,7 +3,10 @@
 const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 const del =  require('del');
+
 
 const dist = "./build/";
 
@@ -75,6 +78,8 @@ gulp.task("build-prod-js", () => {
 
 gulp.task("build-prod-npm", () => {
   return gulp.src("./src/js/modules/saveFormDataStorage.js")
+    .pipe(babel({presets: ['@babel/preset-env']}))
+    .pipe(uglify())
     .pipe(gulp.dest(dist));
 });
 
