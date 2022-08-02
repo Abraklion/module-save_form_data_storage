@@ -12,7 +12,6 @@ npm install save-form-data-storage
 
 **import**
 
-
 ```js
 import SaveFormDataStorage from "save-form-data-storage";
 ```
@@ -27,19 +26,13 @@ HTML
 <form id="my-form" action="">
 
   <input type="text" name="name" class="group_1">
-
   <input type="text" name="ege" class="group_2">
-
-
+  
   <input type="radio" name="gender" value="male" class="group_3">
-
   <input type="radio" name="gender" value="female" class="group_3">
 
-
   <input type="checkbox" name="language" value="russian" class="group_4">
-
   <input type="checkbox" name="language" value="english" class="group_4">
-
 
   <select name="country" class="group_5">
     <option value="russia">Россия</option>

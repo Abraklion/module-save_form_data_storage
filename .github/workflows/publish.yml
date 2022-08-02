@@ -25,7 +25,7 @@ jobs:
       - run: npm run npm-build
       - run: npm publish
     env:
-      NODE_AUTH_TOKEN: v${{ secrets.SAVEFORMDATASTORAGE_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.SAVEFORMDATASTORAGE_TOKEN }}
 
 
 
