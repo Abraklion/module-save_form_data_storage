@@ -1,6 +1,6 @@
 {
   "name": "save-form-data-storage",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Writes the data entered in the HTML form to LocalStorage and retrieves it as needed.",
   "main": "build/saveFormDataStorage.js",
   "scripts": {
@@ -10,7 +10,9 @@
   },
   "repository": "https://github.com/Abraklion/module-save_form_data_storage.git",
   "keywords": [
-    "HTML", "Form", "LocalStorage"
+    "HTML",
+    "Form",
+    "LocalStorage"
   ],
   "author": "Abraklion",
   "license": "ISC",
