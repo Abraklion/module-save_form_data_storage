@@ -1,0 +1,48 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2     # получить содержимое репозитория
+      - uses: actions/setup-node@v2   # установить Nodejs
+        with:
+          node-version: 16.16.0
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: |
+          git config user.name abraklion
+          git config user.email abraklion@gmail.com
+          npm version ${{ github.event.inputs.version }}
+          git push origin master
+          git push origin v${{ github.event.inputs.version }}
+      - run: npm run npm-build
+      - run: npm publish
+    env:
+      NODE_AUTH_TOKEN: v${{ secrets.SAVEFORMDATASTORAGE_TOKEN }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

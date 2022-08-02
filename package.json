@@ -4,11 +4,13 @@
   "description": "Writes the data entered in the HTML form to LocalStorage and retrieves it as needed.",
   "main": "build/saveFormDataStorage.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "git-build": "gulp build-git",
+    "npm-build": "gulp build-npm"
   },
   "repository": "https://github.com/Abraklion/module-save_form_data_storage.git",
   "keywords": [
-    "HTML, form, localStorage"
+    "HTML", "Form", "LocalStorage"
   ],
   "author": "Abraklion",
   "license": "ISC",
